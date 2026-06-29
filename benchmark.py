@@ -27,10 +27,12 @@ def benchmark_model(name, run_fn, sync_fn=None, warmup=20, iters=1000):
 
     times = np.array(times)
 
-    print(f"\n=== {name} ===")
-    print(f"mean: {times.mean()*1000:.3f} ms")
-    print(f"p50 : {np.percentile(times, 50)*1000:.3f} ms")
-    print(f"p95 : {np.percentile(times, 95)*1000:.3f} ms")
-    print(f"p99 : {np.percentile(times, 99)*1000:.3f} ms")
+    print(f"\n====== {name} ======")
+    print(f"mean:       {times.mean()*1000:.3f} ms")
+    print(f"p50:        {np.percentile(times, 50)*1000:.3f} ms")
+    print(f"p95:        {np.percentile(times, 95)*1000:.3f} ms")
+    print(f"p99:        {np.percentile(times, 99)*1000:.3f} ms")
+    print(f"std dev:    {np.std(times)*1000:.3f} ms")
+    print(f"throughput: {(iters / np.sum(times)):.3f} inferences/s")
 
     return times
