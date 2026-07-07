@@ -28,7 +28,7 @@ if not os.path.exists(MODEL_LOCATION):
 x = x.numpy()
 coreml_model = coremltools.models.MLModel(
     MODEL_LOCATION,
-    compute_units=coremltools.ComputeUnit.ALL
+    compute_units=coremltools.ComputeUnit.CPU_AND_GPU
 )
 
 def coreml_run():
