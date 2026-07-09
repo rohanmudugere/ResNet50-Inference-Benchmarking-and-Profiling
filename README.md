@@ -8,3 +8,5 @@ https://docs.google.com/spreadsheets/d/1vuUf47wj6R930EpwFpNKTHKsXw0Jz0PX1xqlmF9N
 PyTorch Compiled execution granted a 1.26x speedup in _Mean Inference Latency_ over PyTorch Eager, while Core ML granted a 1.97x speedup in _Mean Inference Latency_ over PyTorch Eager. This resulted in proportional gains in _Inference Throughput_ over PyTorch Eager for PyTorch Compiled and Core ML (25.84% and 97.08% respectively).
 
 In comparison to PyTorch Eager execution, PyTorch Compiled allowed for greater kernel dispatch and efficiency. _Average Compute Shader Launch Utilization_ was 126.47% higher, resulting in _Average Compute SIMD Groups Inflight_ being 48.04% higher. Additionally, _Average Kernel Occupancy_ was 48.08% higher, resulting in _Average Total Occupancy_ being 45.19% higher.
+
+In comparison to PyTorch Eager execution, Core ML allowed for more efficient memory usage and access. _Average GPU Bandwidth_ was 79.84% lower, while _Average Buffer L1 Miss Rate_ was 64.27% lower.
