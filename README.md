@@ -1,4 +1,4 @@
-Benchmarking and profiling pre-trained ResNet50 inference across PyTorch Eager, PyTorch Compiled, and Core ML backends using Metal System Trace on a MacBook Pro M4 Pro
+Benchmarking and profiling ResNet50 inference across PyTorch Eager, PyTorch Compiled, and Core ML backends using Metal System Trace on a MacBook Pro M4 Pro
 
 NOTE: torch 2.7.0 is the latest version that has been tested with coremltools 9.0, but torch.compile on mps is experimental on version 2.7.0
 
